@@ -11,6 +11,7 @@ import {
   ShoppingBag,
   Play,
 } from "lucide-react";
+import Image from "next/image";
 import ScrollReveal from "./scroll-reveal";
 
 // Project interfaces
@@ -135,19 +136,23 @@ export default function ProjectsSection() {
           <div className="grid grid-cols-2 gap-2 flex-1">
             <div className="bg-white/[0.02] border border-white/5 rounded p-2 flex flex-col justify-center">
               <div className="aspect-[4/3] rounded border border-white/5 overflow-hidden relative">
-                <img
+                <Image
                   src="/images/projects/Hidrip_Login_Page.png"
                   alt="HiDrip Login Screen"
-                  className="w-full h-full object-cover rounded"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover rounded"
                 />
               </div>
             </div>
             <div className="bg-white/[0.02] border border-white/5 rounded p-2 flex flex-col justify-center">
               <div className="aspect-[4/3] rounded border border-white/5 overflow-hidden relative">
-                <img
+                <Image
                   src="/images/projects/Hidrip_Product_Page.png"
                   alt="HiDrip Product Screen"
-                  className="w-full h-full object-cover rounded"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover rounded"
                 />
               </div>
             </div>
@@ -183,7 +188,7 @@ export default function ProjectsSection() {
       demoVideoUrl: "https://youtu.be/6sCMKQEZgig",
       hasDemo: true,
       hasLiveWebsite: false,
-      imagePath: "/images/projects/churnguard-ai.png",
+      imagePath: "/images/projects/customer-prediction.png",
       mockIcon: <ShieldAlert className="w-5 h-5 text-[#F97316]" />,
       mockComponent: (
         <div className="w-full h-full bg-[#18080A] rounded-xl border border-white/5 p-4 font-sans text-xs text-white/80 flex flex-col justify-between">
@@ -248,19 +253,23 @@ export default function ProjectsSection() {
           <div className="grid grid-cols-2 gap-2 pt-2">
             <div className="bg-white/[0.02] border border-white/5 rounded p-2 flex flex-col justify-center">
               <div className="aspect-[4/3] rounded border border-white/5 overflow-hidden relative">
-                <img
+                <Image
                   src="/images/projects/customer-prediction.png"
                   alt="ChurnGuard AI Customer Risk Prediction"
-                  className="w-full h-full object-cover rounded"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover rounded"
                 />
               </div>
             </div>
             <div className="bg-white/[0.02] border border-white/5 rounded p-2 flex flex-col justify-center">
               <div className="aspect-[4/3] rounded border border-white/5 overflow-hidden relative">
-                <img
-                  src="/images/projects/Dashboard.png"
+                <Image
+                  src="/images/projects/dashboard.png"
                   alt="ChurnGuard AI Risk Assessment Dashboard"
-                  className="w-full h-full object-cover rounded"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover rounded"
                 />
               </div>
             </div>
@@ -338,19 +347,23 @@ export default function ProjectsSection() {
           <div className="grid grid-cols-2 gap-2 pt-2">
             <div className="bg-white/[0.02] border border-white/5 rounded p-2 flex flex-col justify-center">
               <div className="aspect-[4/3] rounded border border-white/5 overflow-hidden relative">
-                <img
+                <Image
                   src="/images/projects/library.png"
                   alt="DocuMind AI Library View"
-                  className="w-full h-full object-cover rounded"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover rounded"
                 />
               </div>
             </div>
             <div className="bg-white/[0.02] border border-white/5 rounded p-2 flex flex-col justify-center">
               <div className="aspect-[4/3] rounded border border-white/5 overflow-hidden relative">
-                <img
+                <Image
                   src="/images/projects/dashboard.png"
                   alt="DocuMind AI Dashboard"
-                  className="w-full h-full object-cover rounded"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover rounded"
                 />
               </div>
             </div>
@@ -500,7 +513,7 @@ export default function ProjectsSection() {
   // Check if real project screenshots exist
   useEffect(() => {
     projects.forEach((proj) => {
-      const img = new Image();
+      const img = new window.Image();
       img.src = proj.imagePath;
       img.onload = () => {
         setImagesLoaded((prev) => ({ ...prev, [proj.id]: true }));
@@ -576,10 +589,12 @@ export default function ProjectsSection() {
                   >
                     <div className="w-full max-w-[550px] aspect-[4/3] rounded-2xl border border-[rgba(249,115,22,0.15)] bg-black/40 p-2 shadow-sm hover:shadow-md transition-shadow duration-300 relative overflow-hidden flex items-center justify-center">
                       {imagesLoaded[project.id] ? (
-                        <img
+                        <Image
                           src={project.imagePath}
                           alt={`${project.name} UI Preview`}
-                          className="w-full h-full object-cover rounded-xl"
+                          fill
+                          sizes="(max-width: 1024px) 100vw, 50vw"
+                          className="object-cover opacity-90 group-hover/image:scale-105 transition-transform duration-[700ms] ease-out will-change-transform"
                         />
                       ) : (
                         <div className="w-full h-full flex flex-col justify-between">

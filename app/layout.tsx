@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 
-const BASE_URL = 'https://your-domain.vercel.app'; // TODO: Replace with your production domain after deployment
+const BASE_URL = 'https://harshith-portfolio-pi.vercel.app'; // TODO: Replace with your production domain after deployment
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     template: '%s | Harshith S',
   },
   description:
-    'Software Engineer specializing in full-stack development, backend systems, and AI-powered products. Building scalable applications with Java, Spring Boot, Python, React, and Node.js.',
+    'Software Engineer & AI Developer building scalable full-stack applications and intelligent backend systems with Java, Spring Boot, React, and Next.js.',
   keywords: [
     'Harshith S',
     'Software Engineer',
@@ -54,10 +54,10 @@ export const metadata: Metadata = {
     siteName: 'Harshith S Portfolio',
     title: 'Harshith S | Software Engineer & AI Developer',
     description:
-      'Software Engineer specializing in full-stack development, backend systems, and AI-powered products. Building scalable applications with Java, Spring Boot, Python, React, and Node.js.',
+      'Software Engineer & AI Developer building scalable full-stack applications and intelligent backend systems with Java, Spring Boot, React, and Next.js.',
     images: [
       {
-        url: '/og-image.png', // TODO: Add a 1200x630 OG image to public/og-image.png before deployment
+        url: `${BASE_URL}/og-image.png`,
         width: 1200,
         height: 630,
         alt: 'Harshith S — Software Engineer & AI Developer Portfolio',
@@ -68,14 +68,13 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Harshith S | Software Engineer & AI Developer',
     description:
-      'Software Engineer specializing in full-stack development, backend systems, and AI-powered products.',
-    images: ['/og-image.png'], // TODO: Same OG image — add to public/og-image.png before deployment
-    creator: '@harshith', // TODO: Replace with your actual Twitter/X handle if available
+      'Software Engineer & AI Developer building scalable full-stack applications and intelligent backend systems with Java, Spring Boot, React, and Next.js.',
+    images: [`${BASE_URL}/og-image.png`],
+    creator: '@harshith',
   },
   icons: {
     icon: '/favicon.ico',
-    // TODO: Add apple-touch-icon.png (180x180) to public/ for iOS home screen support
-    // apple: '/apple-touch-icon.png',
+    apple: '/apple-touch-icon.png',
   },
   manifest: '/manifest.webmanifest',
 };
@@ -96,7 +95,7 @@ export default function RootLayout({
         email: 'harshithyadav662@gmail.com',
         jobTitle: 'Software Engineer',
         description:
-          'Software Engineer specializing in full-stack development, backend systems, and AI-powered products.',
+          'Software Engineer & AI Developer building scalable full-stack applications and intelligent backend systems with Java, Spring Boot, React, and Next.js.',
         knowsAbout: [
           'Java',
           'Spring Boot',

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const BASE_URL = 'https://your-domain.vercel.app'; // TODO: Replace with your production domain after deployment
+  const BASE_URL = 'https://harshith-portfolio-pi.vercel.app'; // TODO: Replace with your production domain after deployment
 
   // Homepage route
   const routes = [
