@@ -1,0 +1,22 @@
+{
+  "name": "Harshith S Portfolio",
+  "short_name": "Harshith",
+  "description": "Portfolio of Harshith S — Software Engineer & AI Developer.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
