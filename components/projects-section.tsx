@@ -37,7 +37,6 @@ interface Project {
 export default function ProjectsSection() {
   const [imagesLoaded, setImagesLoaded] = useState<Record<string, boolean>>({});
 
-
   const projects: Project[] = [
     {
       id: "hidrip",
@@ -188,7 +187,7 @@ export default function ProjectsSection() {
       demoVideoUrl: "https://youtu.be/6sCMKQEZgig",
       hasDemo: true,
       hasLiveWebsite: false,
-      imagePath: "/images/projects/customer-prediction.png",
+      imagePath: "/images/projects/dashboard.png",
       mockIcon: <ShieldAlert className="w-5 h-5 text-[#F97316]" />,
       mockComponent: (
         <div className="w-full h-full bg-[#18080A] rounded-xl border border-white/5 p-4 font-sans text-xs text-white/80 flex flex-col justify-between">
