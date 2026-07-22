@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Menu } from 'lucide-react';
+import { Menu, Download } from 'lucide-react';
 
 const SPOTLIGHT_RADIUS = 340;
 
@@ -356,6 +356,14 @@ export default function PortfolioHero() {
             {typedTitle}
             <span className="animate-blink font-sans not-italic inline-block ml-0.5 text-white/80">|</span>
           </span>
+          <a
+            href="/Resume/Harshith_S_Resume.pdf"
+            download
+            className="mt-6 md:mt-8 pointer-events-auto inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 hover:scale-[1.02] active:scale-95 transition-all duration-300 group animate-rise-3"
+          >
+            <span className="font-sans text-sm tracking-wide text-white/90 group-hover:text-white">Download Resume</span>
+            <Download className="w-4 h-4 text-white/70 group-hover:text-[#F97316] transition-colors" />
+          </a>
         </div>
 
         {/* Supporting Copy (Bottom-Left) */}
